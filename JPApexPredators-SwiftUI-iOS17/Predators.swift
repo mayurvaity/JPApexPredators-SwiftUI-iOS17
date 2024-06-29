@@ -7,6 +7,7 @@
 
 import Foundation
 
+//class to decode JSON data and store converted data into a variable 
 class Predators {
     //an array to store apexPredators from JSON data (after converting in our swift obj)
     var apexPredators: [ApexPredator] = []

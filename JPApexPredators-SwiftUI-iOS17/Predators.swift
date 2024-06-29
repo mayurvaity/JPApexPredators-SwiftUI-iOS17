@@ -37,4 +37,34 @@ class Predators {
             }
         }
     }
+    
+    //fn to search text and return filtered list 
+    func search(for searchTerm: String) -> [ApexPredator] {
+        if searchTerm.isEmpty {
+            //if no text in searchfield then return entire list
+            return apexPredators
+        } else {
+            //if any text in searchfield then filter list using it and return filtered list
+            return apexPredators.filter {
+                predator in
+                //filtering on property name of class ApexPredator
+                //localizedCaseInsensitiveContains - to match without case sensitivity
+                predator.name.localizedCaseInsensitiveContains(searchTerm)
+            }
+        }
+    }
+    
+    //fn to sort the list
+    func sort(by alphabetical: Bool) {
+        apexPredators.sort { apexPredator1, apexPredator2 in
+            if alphabetical {
+                //to sort by name of predator
+                apexPredator1.name < apexPredator2.name
+            } else {
+                //to sort by order of appearance in movies
+                //id is already given base on order of appearance in movies 
+                apexPredator1.id < apexPredator2.id
+            }
+        }
+    }
 }

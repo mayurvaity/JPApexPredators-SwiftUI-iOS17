@@ -9,6 +9,9 @@ import Foundation
 
 //class to decode JSON data and store converted data into a variable 
 class Predators {
+    //to keep unchanged list of apex predators 
+    var allApexPredators: [ApexPredator] = []
+    
     //an array to store apexPredators from JSON data (after converting in our swift obj)
     var apexPredators: [ApexPredator] = []
     
@@ -30,8 +33,8 @@ class Predators {
                 //in data there is snake case, we are using camel case
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 //decoding "data" and storing into abv created array of objs
-                apexPredators = try decoder.decode([ApexPredator].self, from: data)
-                
+                allApexPredators = try decoder.decode([ApexPredator].self, from: data)
+                apexPredators = allApexPredators
             } catch {
                 print("Error decoding JSON data, \(error)")
             }
@@ -65,6 +68,17 @@ class Predators {
                 //id is already given base on order of appearance in movies 
                 apexPredator1.id < apexPredator2.id
             }
+        }
+    }
+    
+    //fn to filter using drop down menu
+    func filter(by type: PredatorType) {
+        if type == .all {
+            apexPredators = allApexPredators
+        } else {
+            apexPredators = allApexPredators.filter({ predator in
+                predator.type == type
+            })
         }
     }
 }

@@ -14,6 +14,7 @@
 		0D15EE8C2C305AE70092AEEA /* jpapexpredators.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D15EE8B2C305AE70092AEEA /* jpapexpredators.json */; };
 		0D15EE8E2C305E430092AEEA /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15EE8D2C305E430092AEEA /* ApexPredator.swift */; };
 		0D15EE902C3062600092AEEA /* Predators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15EE8F2C3062600092AEEA /* Predators.swift */; };
+		0D4AE7BB2C31DC260052FCC0 /* PredatorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4AE7BA2C31DC260052FCC0 /* PredatorDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0D15EE8B2C305AE70092AEEA /* jpapexpredators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jpapexpredators.json; sourceTree = "<group>"; };
 		0D15EE8D2C305E430092AEEA /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
 		0D15EE8F2C3062600092AEEA /* Predators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predators.swift; sourceTree = "<group>"; };
+		0D4AE7BA2C31DC260052FCC0 /* PredatorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				0D15EE7D2C305A0C0092AEEA /* JPApexPredators_SwiftUI_iOS17App.swift */,
 				0D15EE7F2C305A0C0092AEEA /* ContentView.swift */,
+				0D4AE7BA2C31DC260052FCC0 /* PredatorDetailView.swift */,
 				0D15EE8D2C305E430092AEEA /* ApexPredator.swift */,
 				0D15EE8F2C3062600092AEEA /* Predators.swift */,
 				0D15EE8B2C305AE70092AEEA /* jpapexpredators.json */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D15EE8E2C305E430092AEEA /* ApexPredator.swift in Sources */,
+				0D4AE7BB2C31DC260052FCC0 /* PredatorDetailView.swift in Sources */,
 				0D15EE802C305A0C0092AEEA /* ContentView.swift in Sources */,
 				0D15EE902C3062600092AEEA /* Predators.swift in Sources */,
 				0D15EE7E2C305A0C0092AEEA /* JPApexPredators_SwiftUI_iOS17App.swift in Sources */,

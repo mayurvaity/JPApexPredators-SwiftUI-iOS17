@@ -36,10 +36,7 @@ struct ContentView: View {
             List(filteredDinos) { predator in
                 //NavigationLink - to make list items clickable and to call another screen (view)
                 NavigationLink {
-                    Image(predator.image)
-                        .resizable()
-                        .scaledToFit()
-                    
+                    PredatorDetailView(predator: predator)
                 } label :{
                     HStack {
                         //dinosour image

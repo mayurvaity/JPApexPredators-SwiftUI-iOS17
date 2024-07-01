@@ -22,6 +22,16 @@ struct PredatorDetailView: View {
                     Image(predator.type.rawValue)
                         .resizable()
                         .scaledToFit()
+                    //overlay - to add black gradient near the bottom of the image
+                        .overlay {
+                            LinearGradient(stops: [
+                                //clear gradient to show bg image
+                                //location - 0.8 means it starts fading at 80% down
+                                Gradient.Stop(color: .clear, location: 0.8),
+                                //black gradient for continuity effect
+                                Gradient.Stop(color: .black, location: 1)
+                            ], startPoint: .top, endPoint: .bottom)
+                        }
                     
                     //dinosaur image
                     Image(predator.image)
@@ -95,5 +105,6 @@ struct PredatorDetailView: View {
 }
 
 #Preview {
-    PredatorDetailView(predator: Predators().apexPredators[2])
+    PredatorDetailView(predator: Predators().apexPredators[10])
+        .preferredColorScheme(.dark)
 }

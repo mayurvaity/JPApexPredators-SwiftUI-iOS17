@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     //obj to get all predator data
@@ -36,7 +37,8 @@ struct ContentView: View {
             List(filteredDinos) { predator in
                 //NavigationLink - to make list items clickable and to call another screen (view)
                 NavigationLink {
-                    PredatorDetailView(predator: predator)
+                    //distance: 30000 - view pin on the map from 30000 ft abv ground 
+                    PredatorDetailView(predator: predator, position: .camera(MapCamera(centerCoordinate: predator.location, distance: 30000)))
                 } label :{
                     HStack {
                         //dinosour image
@@ -116,7 +118,7 @@ struct ContentView: View {
             }
             
         }
-//        .preferredColorScheme(.dark)
+        .preferredColorScheme(.dark)
     }
 }
 

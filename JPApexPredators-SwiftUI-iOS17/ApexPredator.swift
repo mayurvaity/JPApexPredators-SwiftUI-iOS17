@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 //all the property types should conform to Decodable
 //all default property types automatically conform to decodable, but user defined ones need to do manually (in this case MovieScene)
@@ -25,6 +26,11 @@ struct ApexPredator: Decodable, Identifiable {
     //lowercased - lowercasing all charactrers
     var image: String {
         name.lowercased().replacingOccurrences(of: " ", with: "")
+    }
+    
+    //CLLocationCoordinate2D variable to convert and store latitude and longitude data into  
+    var location: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
     struct MovieScene: Decodable, Identifiable {

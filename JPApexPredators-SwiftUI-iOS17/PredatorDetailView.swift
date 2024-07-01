@@ -37,15 +37,57 @@ struct PredatorDetailView: View {
 //                Text("\(geo.size.height)")
 //                Text("\(geo.size.width)")
                 
-                //dino name
+                //alignment -  to set alignment of views within this vstack
+                VStack(alignment: .leading) {
+                    //dino name
+                    Text(predator.name)
+                        .font(.largeTitle)
+                    
+                    //current location
+                    
+                    // list of movies
+                    Text("Appears In:")
+                        .font(.title3)
+                    
+                    //\.self - to set movie name as id, as we cannot make string list identifiable
+                    ForEach(predator.movies, id: \.self) {
+                        movie in
+                        Text("• " + movie)
+                            .font(.subheadline)
+                    }
+                    
+                    //movie moments
+                    Text("Movie Moments:")
+                        .font(.title)
+                        .padding(.top, 15) //to add top padding 15
+                        
+                    ForEach(predator.movieScenes) {
+                        scene in
+                        Text(scene.movie)
+                            .font(.title2)
+                            .padding(.vertical, 1) //vertical - to add padding abv and below the text
+                        
+                        Text(scene.sceneDescription)
+                            .padding(.bottom, 15)
+                    }
+                    
+                    //link to webpage
+                    Text("Read More:")
+                        .font(.caption)
+                    
+                    //link - this view opens provided URL into Safari browser
+                    Link(predator.link,
+                         destination: URL(string: predator.link)!)
+                    .font(.caption)
+                    .foregroundStyle(Color(.blue))
+                    
+                }
+                .padding()
+                .padding(.bottom)
+                .frame(width: geo.size.width,
+                       alignment: .leading) //to set width of the vstack, and alignment of the vstack
+//                .border(.blue)
                 
-                //current location
-                
-                // list of movies
-                
-                //movie moments
-                
-                //link to webpage
             }
             .ignoresSafeArea() //to get scrollview all the way up to the screen
         }

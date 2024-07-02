@@ -60,9 +60,11 @@ struct PredatorDetailView: View {
                     //current location
                     //NavigationLink - added to make it clickable and to go to another view when clicked
                     NavigationLink {
-                        Image(predator.image)
-                            .resizable()
-                            .scaledToFit()
+                        //calling predator map view wth selected dino data 
+                        PredatorMapView(position: .camera(MapCamera(centerCoordinate: predator.location,
+                                                                    distance: 1000,
+                                                                    heading: 250,
+                                                                    pitch: 80)))
                     } label: {
                         //Map - this view is used to show Apple Maps
                         Map(position: $position) {

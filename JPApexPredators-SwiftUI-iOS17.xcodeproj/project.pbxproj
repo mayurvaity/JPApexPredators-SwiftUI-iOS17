@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D060C902C3464CC0001EADB /* PredatorMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D060C8F2C3464CC0001EADB /* PredatorMapView.swift */; };
 		0D15EE7E2C305A0C0092AEEA /* JPApexPredators_SwiftUI_iOS17App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15EE7D2C305A0C0092AEEA /* JPApexPredators_SwiftUI_iOS17App.swift */; };
 		0D15EE802C305A0C0092AEEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15EE7F2C305A0C0092AEEA /* ContentView.swift */; };
 		0D15EE822C305A0D0092AEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D15EE812C305A0D0092AEEA /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D060C8F2C3464CC0001EADB /* PredatorMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorMapView.swift; sourceTree = "<group>"; };
 		0D15EE7A2C305A0C0092AEEA /* JPApexPredators-SwiftUI-iOS17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JPApexPredators-SwiftUI-iOS17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D15EE7D2C305A0C0092AEEA /* JPApexPredators_SwiftUI_iOS17App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPApexPredators_SwiftUI_iOS17App.swift; sourceTree = "<group>"; };
 		0D15EE7F2C305A0C0092AEEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				0D15EE7D2C305A0C0092AEEA /* JPApexPredators_SwiftUI_iOS17App.swift */,
 				0D15EE7F2C305A0C0092AEEA /* ContentView.swift */,
 				0D4AE7BA2C31DC260052FCC0 /* PredatorDetailView.swift */,
+				0D060C8F2C3464CC0001EADB /* PredatorMapView.swift */,
 				0D15EE8D2C305E430092AEEA /* ApexPredator.swift */,
 				0D15EE8F2C3062600092AEEA /* Predators.swift */,
 				0D15EE8B2C305AE70092AEEA /* jpapexpredators.json */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D060C902C3464CC0001EADB /* PredatorMapView.swift in Sources */,
 				0D15EE8E2C305E430092AEEA /* ApexPredator.swift in Sources */,
 				0D4AE7BB2C31DC260052FCC0 /* PredatorDetailView.swift in Sources */,
 				0D15EE802C305A0C0092AEEA /* ContentView.swift in Sources */,

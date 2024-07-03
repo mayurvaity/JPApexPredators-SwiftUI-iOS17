@@ -37,15 +37,23 @@ struct PredatorDetailView: View {
                             ], startPoint: .top, endPoint: .bottom)
                         }
                     
-                    //dinosaur image
-                    Image(predator.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: geo.size.width/1.5,
-                               height: geo.size.height/3)
-                        .scaleEffect(x: -1) //to flip the image on axis (x axis, in this case)
-                        .shadow(color: .black, radius: 7) // to add shadow to dino image
-                        .offset(y: 20) //to move the image on axis, in this case to give it a 3D effect on y axis
+                    //NavigationLink - to make this image clickable
+                    NavigationLink {
+                        //to open a new view when clicked on dino image 
+                        Image(predator.image)
+                            .resizable()
+                            .scaledToFit()
+                    } label: {
+                        //dinosaur image
+                        Image(predator.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geo.size.width/1.5,
+                                   height: geo.size.height/3)
+                            .scaleEffect(x: -1) //to flip the image on axis (x axis, in this case)
+                            .shadow(color: .black, radius: 7) // to add shadow to dino image
+                            .offset(y: 20) //to move the image on axis, in this case to give it a 3D effect on y axis
+                    }
                 }
                 //geo return size of the screen on each device (changes as per device)
                 //                Text("\(geo.size.height)")
